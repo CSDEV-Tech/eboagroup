@@ -1,0 +1,137 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOAGROUP - Facture #Number</title>
+    <link href="{% static 'css/invoice/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/invoice/invoice.css' %}" rel="stylesheet">
+</head>
+<body style="background-color: #fff;">
+<br><br><br><br><br>
+<div class="container invoice-container">
+    <div class="row invoice-header">
+        <div class="invoice-col">
+            <p><img src="{% static 'media/logo.jpeg' %}" alt="BoagroUp'"
+                    width="100"
+                    height="100"></p>
+        </div>
+        <div class="invoice-col" style="text-align: right">
+            <h3>Facture #Number</h3>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="invoice-col right">
+            <strong>A payer chez</strong>
+            <address class="small-text">
+                BoaGroUp'<br>
+                +225 XX XX XX / XX XX XX XX <br>
+                Yamoussoukro, INP-HB<br>
+                Côte d'Ivoire<br>
+                <br>
+            </address>
+        </div>
+        <div class="invoice-col">
+            <strong>Facturé à</strong>
+            <address class="small-text">
+                {{ name }} <br>
+                {{ address }}<br>
+                {{ default_town }}<br>
+                <br><br>
+            </address>
+        </div>
+    </div>
+    <div class="row">
+        <div class="invoice-col right">
+            <strong>Méthode de payement</strong><br>
+            <span class="small-text">
+                %PayMent Method
+            </span>
+            <br><br>
+        </div>
+        <div class="invoice-col">
+            <strong>Date d'émission de la commande</strong><br>
+            <span class="small-text">%DATE<br><br>
+            <strong>Date de réception</strong><br>
+            <span class="small-text">%DATE<br><br>
+</span>
+        </div>
+    </div>
+    <br>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><strong>Eléments de la commande</strong></h3>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <td><strong>Nom</strong></td>
+                        <td width="20%" class="text-center"><strong>quantité</strong></td>
+                        <td width="20%" class="text-center"><strong>coût total</strong></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>%Command Item Name</td>
+                        <td>%Command Item amount</td>
+                        <td class="text-center">
+                            %item cost FCFA
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="total-row text-left"><strong>Coût Net</strong></td>
+                        <td class="total-row"></td>
+                        <td class="total-row text-center">XXXX FCFA</td>
+                    </tr>
+                    <tr>
+                        <td class="total-row text-left"><strong>Coût livraison</strong></td>
+                        <td class="total-row"></td>
+                        <td class="total-row text-center">XXXX FCFA</td>
+                    </tr>
+                    <tr>
+                        <td class="total-row text-left"><strong>Total</strong></td>
+                        <td class="total-row"></td>
+                        <td class="total-row text-center">XXXX FCFA</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{#    <div class="transactions-container small-text">#}
+{#        <div class="table-responsive">#}
+{#            <table class="table table-condensed">#}
+{#                <thead>#}
+{#                <tr>#}
+{#                    <td class="text-center"><strong>Transaction Date</strong></td>#}
+{#                    <td class="text-center"><strong>Gateway</strong></td>#}
+{#                    <td class="text-center"><strong>Transaction ID</strong></td>#}
+{#                    <td class="text-center"><strong>Amount</strong></td>#}
+{#                </tr>#}
+{#                </thead>#}
+{#                <tbody>#}
+{#                <tr>#}
+{#                    <td class="text-center">15th Oct 2019</td>#}
+{#                    <td class="text-center">Credit/Debit Card (Visa, MC, AmEx, Disc, JCB, DC, UnionPay)</td>#}
+{#                    <td class="text-center">txn_1FTvjQJTIT8vqFoAS4DHt6eh</td>#}
+{#                    <td class="text-center">$31.00 USD</td>#}
+{#                </tr>#}
+{#                <tr>#}
+{#                    <td class="text-right" colspan="3"><strong>Balance</strong></td>#}
+{#                    <td class="text-center">$0.00 USD</td>#}
+{#                </tr>#}
+{#                </tbody>#}
+{#            </table>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="pull-right btn-group btn-group-sm hidden-print">#}
+{#        <a href="javascript:window.print()" class="btn btn-default"><i class="fas fa-print"></i> Print</a>#}
+{#        <a href="dl.php?type=i&amp;id=2006204" class="btn btn-default"><i class="fas fa-download"></i> Download</a>#}
+{#    </div>#}
+</div>
+</body>
+</html>

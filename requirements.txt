@@ -1,0 +1,16 @@
+algoliasearch==1.20.0
+algoliasearch-django==1.7.1
+Django==2.2.7
+django-cors-headers==3.0.2
+django-rest-auth==0.9.5
+django-tinymce==2.8.0
+django-tinymce4-lite==1.7.4
+djangorestframework==3.9.2
+mysqlclient==1.4.1
+django-import-export==1.2.0
+Pillow==5.4.1
+geoIp2
+django-filebrowser==3.12.1
+django-filebrowser-no-grappelli==3.8.0
+Django-tinymce-filebrowser==0.2.1
+django-background-tasks
